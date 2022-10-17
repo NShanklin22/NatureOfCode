@@ -22,6 +22,7 @@ def animate(i, xvals:list, yvals:list):
     # Add x and y to lists
     xvals.append(i)
     yvals.append(noisey(i/50))
+    print(noisey(i/500)*10)
     # Limit x and y lists to 10 items
     xvals = xvals[-250:]
     yvals = yvals[-250:]
@@ -31,8 +32,8 @@ def animate(i, xvals:list, yvals:list):
     # Format plot
     plt.xticks(rotation=45, ha='right')
     plt.subplots_adjust(bottom=0.20)
-    ax.set_title('Plot of random numbers from https://qrng.anu.edu.au')
-    ax.set_xlabel('Date Time (hour:minute:second)')
+    ax.set_title('Perlin Noise values vs time')
+    ax.set_xlabel('Time')
     ax.set_ylabel('Noise Y')
 
 # Set up plot to call animate() function every 1000 milliseconds

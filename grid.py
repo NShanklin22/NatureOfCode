@@ -24,7 +24,6 @@ class Grid:
                 y_pos = y * self.scale
                 x_pos = x * self.scale
                 if x < 19:
-                    print(self.grid_array[x][y])
                     if self.grid_array[x][y] > 0:
                         self.grid_array[x+1][y] = self.grid_array[x][y] - 5
 
